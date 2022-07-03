@@ -1,0 +1,619 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter any number: 13\n",
+      "Is Prime\n"
+     ]
+    }
+   ],
+   "source": [
+    "# taking input from the user\n",
+    "number = int(input( \"Enter any number: \" ))\n",
+    "isPrime= True #Boolean to store if number is prime or not\n",
+    "if number > 1 : # prime number is always greater than 1\n",
+    "    i= 2\n",
+    "    while i< number:\n",
+    "        if (number % i) == 0 : # Checking for positive divisors\n",
+    "            isPrime= False\n",
+    "            break\n",
+    "        i=i+ 1\n",
+    "if (number<= 1 ): # If number is less than or equal to 1\n",
+    "        print( \"Is Not Prime\" )\n",
+    "elif (isPrime): # If Boolean is true\n",
+    "        print( \"Is Prime\" )\n",
+    "else :\n",
+    "        print( \"Is Not Prime\" ) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "13\n",
+      "Given Number is prime\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Program to check whether a number is prime or not\n",
+    "\n",
+    "n = int(input())\n",
+    "d = 2\n",
+    "flag = False\n",
+    "while d < n:\n",
+    "    if n % d == 0:\n",
+    "        flag = True\n",
+    "    d = d + 1\n",
+    "if flag:\n",
+    "    print(\"Given Number is not prime\")\n",
+    "else:\n",
+    "    print(\"Given Number is prime\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "145\n",
+      "145 is not an armstrong number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Armstrong no.\n",
+    "n=int(input())\n",
+    "s=n\n",
+    "sum=0\n",
+    "l=len(str(n))\n",
+    "while n>0:\n",
+    "    d=(n%10)**l\n",
+    "    sum=sum+d\n",
+    "    n=n//10\n",
+    "if s==sum:\n",
+    "    print(s, \"is an armstrong number\")\n",
+    "else:\n",
+    "    print(s,\"is not an armstrong number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "145\n",
+      "strong number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Strong No. program\n",
+    "n=int(input())\n",
+    "sum=0\n",
+    "fact=1\n",
+    "a=n\n",
+    "\n",
+    "while n>0:\n",
+    "    d=n%10\n",
+    "    fact=1\n",
+    "    for i in range (1, d+1):\n",
+    "        fact= fact*i\n",
+    "    sum=sum+fact\n",
+    "    n=n//10\n",
+    "if(a==sum):\n",
+    "    print(\"strong number\")\n",
+    "else:\n",
+    "    print(\" not a strong number\")\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n",
+      "Perfect no\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Perfect No.\n",
+    "\n",
+    "n=int(input())\n",
+    "sum=0\n",
+    "for i in range (1, n):\n",
+    "    if(i%2==0):\n",
+    "        sum=sum+i\n",
+    "if(sum==n):\n",
+    "    print(\"Perfect no\")\n",
+    "else:\n",
+    "    print(\"not perfect no\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n",
+      "AB\n",
+      "ABC\n",
+      "ABCD\n",
+      "ABCDE\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range (5):\n",
+    "    for j in range(0, i+1):\n",
+    "        print(chr(65+j),end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ABCDE\n",
+      "ABCD\n",
+      "ABC\n",
+      "AB\n",
+      "A\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range (5,0,-1):\n",
+    "    for j in range(0, i):\n",
+    "        print(chr(65+j),end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n",
+      "AB\n",
+      "ABC\n",
+      "ABCD\n",
+      "ABCDE\n",
+      "ABCDE\n",
+      "ABCD\n",
+      "ABC\n",
+      "AB\n",
+      "A\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range (5):\n",
+    "    for j in range(0, i+1):\n",
+    "        print(chr(65+j),end=\"\")\n",
+    "    print()\n",
+    "for i in range (5,0,-1):\n",
+    "    for j in range(0, i):\n",
+    "        print(chr(65+j),end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C\n",
+      "CH\n",
+      "CHI\n",
+      "CHIT\n",
+      "CHITK\n",
+      "CHITKA\n",
+      "CHITKAR\n",
+      "CHITKARA\n"
+     ]
+    }
+   ],
+   "source": [
+    "str=\"CHITKARA\"\n",
+    "l=len(str)\n",
+    "for i in range(0,l):\n",
+    "    for j in range(0,i+1):\n",
+    "        print(str[j],end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "CHITKARA\n",
+      "CHITKAR\n",
+      "CHITKA\n",
+      "CHITK\n",
+      "CHIT\n",
+      "CHI\n",
+      "CH\n",
+      "C\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "str=\"CHITKARA\"\n",
+    "l=len(str)\n",
+    "for i in range(l,-1,-1):\n",
+    "    for j in range(0,i):\n",
+    "        print(str[j],end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C\n",
+      "CH\n",
+      "CHI\n",
+      "CHIT\n",
+      "CHITK\n",
+      "CHITKA\n",
+      "CHITKAR\n",
+      "CHITKARA\n",
+      "CHITKAR\n",
+      "CHITKA\n",
+      "CHITK\n",
+      "CHIT\n",
+      "CHI\n",
+      "CH\n",
+      "C\n",
+      "\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "str=\"CHITKARA\"\n",
+    "l=len(str)\n",
+    "for i in range(0,l):\n",
+    "    for j in range(0,i+1):\n",
+    "        print(str[j],end=\"\")\n",
+    "    print()\n",
+    "str=\"CHITKARA\"\n",
+    "l=len(str)\n",
+    "for i in range(l,-1,-1):\n",
+    "    for j in range(0,i-1):\n",
+    "        print(str[j],end=\"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "7\n",
+      "11\n",
+      "13\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Program to print all prime numbers from 1 to n\n",
+    "\n",
+    "n = int(input())\n",
+    "k = 2 #Because 1 is not a prime number and first prime number is 2\n",
+    "while k <= n:\n",
+    "    d = 2\n",
+    "    flag = False\n",
+    "    while d < k:\n",
+    "        if k % d == 0:\n",
+    "            flag = True\n",
+    "        d = d + 1\n",
+    "    if not(flag):\n",
+    "        print(k)\n",
+    "    k = k + 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "24\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Program to find factorial of a given number\n",
+    "\n",
+    "N = int(input())\n",
+    "i = 1\n",
+    "fact = 1\n",
+    "while i <= N:\n",
+    "    fact *= i\n",
+    "    i += 1\n",
+    "print(fact)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "12\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "6\n",
+      "12\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Program to find all factors of a number\n",
+    "\n",
+    "n = int(input())\n",
+    "for i in range(1, n + 1):\n",
+    "       if n % i == 0:\n",
+    "            print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "4\n",
+      "81\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Program to find power of a number (Using for loop)\n",
+    "\n",
+    "n = int(input())\n",
+    "p = int(input())\n",
+    "\n",
+    "result = 1\n",
+    "\n",
+    "for p in range(p, 0, -1):\n",
+    "    result *= n\n",
+    "\n",
+    "print(result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "  *\n",
+      " ***\n",
+      "*****\n",
+      " ***\n",
+      "  *\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input())\n",
+    "n1 = int((n + 1) / 2)\n",
+    "n2 = n1 - 1\n",
+    "for i in range(1, n1 + 1):\n",
+    "    for space in range(1, n1 - i + 1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, (2 * i)):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()\n",
+    "for i in range(n2 , 0, -1):\n",
+    "    for space in range(n2 - i + 1, 0, -1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, 2 * i):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "  *\n",
+      " ***\n",
+      "*****\n",
+      " ***\n",
+      "  *\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input())\n",
+    "n1 = int((n + 1) / 2)\n",
+    "n2 = n1 - 1\n",
+    "for i in range(1, n1 + 1):\n",
+    "    for space in range(1, n1 - i + 1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, (2 * i)):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()\n",
+    "for i in range(n2 , 0, -1):\n",
+    "    for space in range(n2 - i + 1, 0, -1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, 2 * i):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "  *\n",
+      " ***\n",
+      "*****\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input())\n",
+    "n1 = int((n + 1) / 2)\n",
+    "n2 = n1 - 1\n",
+    "for i in range(1, n1 + 1):\n",
+    "    for space in range(1, n1 - i + 1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, (2 * i)):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      " ***\n",
+      "  *\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input())\n",
+    "n1 = int((n + 1) / 2)\n",
+    "n2 = n1 - 1\n",
+    "for i in range(n2 , 0, -1):\n",
+    "    for space in range(n2 - i + 1, 0, -1):\n",
+    "        print(\" \", end = \"\")\n",
+    "    for star in range(1, 2 * i):\n",
+    "        print(\"*\", end = \"\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
